@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux"
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
 }

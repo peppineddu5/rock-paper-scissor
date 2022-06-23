@@ -1,10 +1,21 @@
-import React, { FC, useState } from 'react';
-import Image from 'next/image';
+import React, {  useEffect } from 'react';
+
 import styles from "../styles/Home.module.css"
+import { useDispatch } from 'react-redux';
+import { decrementa, incrementa } from '../action';
 
 const Result = ({ choise, select, setValue }: { choise: string, select: string, setValue: React.Dispatch<React.SetStateAction<number>> }) => {
-    console.log(choise + "     " + select)
-
+    const dispatch= useDispatch()
+    let i=0
+    useEffect(()=>{
+        i++;
+        if(i==1)
+            if(select.startsWith("L")){
+                dispatch(decrementa())
+            }else if(select.startsWith("W")){
+                dispatch(incrementa())
+            }
+    },[])
 
     return (<>
         <div className={styles.center}>

@@ -1,5 +1,4 @@
-import React, { Component, FC, useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, {  useEffect } from 'react';
 import styles from "../styles/Home.module.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { paper, rock, scissors } from '../action';
@@ -18,7 +17,7 @@ const WaitResult = ({ choise }: { choise: string }) => {
             }
          
         return () => {
-            console.log("sto morendo")
+            
         }
     }, [])
 

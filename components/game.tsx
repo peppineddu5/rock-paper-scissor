@@ -1,5 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 import styles from "../styles/Home.module.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { paper, rock, scissors } from '../action';
